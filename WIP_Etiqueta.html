@@ -36,10 +36,10 @@
   .opt-c-grad {
     position:absolute; inset:0;
     background: linear-gradient(to right,
-      rgba(13,13,13,0.0)  0%,
-      rgba(13,13,13,0.0)  55%,
-      rgba(13,13,13,0.10) 70%,
-      rgba(13,13,13,0.65) 78%
+      rgba(255,184,28,0.0)  0%,
+      rgba(255,184,28,0.0)  55%,
+      rgba(255,184,28,0.09) 70%,
+      rgba(255,184,28,0.51) 78%
     );
     z-index:1;
   }
@@ -47,7 +47,7 @@
   .body-row { display:flex; flex:1; min-height:0; position:relative; z-index:2; }
 
   .vdiv { width:1px; background:rgba(245,166,35,0.3); margin:0; flex-shrink:0; }
-  .hdiv { height:1px; background:rgba(245,166,35,0.35); margin-bottom:8px; }
+  .hdiv { height:1px; background:rgba(0,0,0,0.35); margin-bottom:8px; }
 
   /* LEFT – now the hero/brand panel */
   .panel-center {
@@ -73,46 +73,46 @@
     display:flex; flex-direction:column; gap:0px;
     overflow-y:auto;
   }
-  .p-title { font-size:8px; letter-spacing:2px; text-transform:uppercase; color:#FFCA28; font-weight:900; margin-bottom:2px; }
-  .ingr-list { font-size:7px; color:#FFD54F; line-height:1.3; }
+  .p-title { font-size:8px; letter-spacing:2px; text-transform:uppercase; color:#111; font-weight:900; margin-bottom:2px; }
+  .ingr-list { font-size:7px; color:#111; line-height:1.3; font-weight:900; }
   .allergen-box {
-    border:1px solid rgba(255,213,79,0.6); border-radius:2px;
+    border:1px solid rgba(0,0,0,0.4); border-radius:2px;
     padding:2px 4px; margin-top:3px;
-    font-size:7.5px; color:#FFCA28; font-weight:bold;
+    font-size:7.5px; color:#111; font-weight:bold;
     letter-spacing:0.3px; text-transform:uppercase; line-height:1.3;
   }
-  .allergen-desc { font-size:7.5px; color:#FFD54F; line-height:1.3; margin-bottom:2px; }
-  .nip-heading { font-size:8px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#FFCA28; line-height:1.1; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,213,79,0.3); }
-  .nip-meta { font-size:7px; color:#FFD54F; line-height:1.4; }
-  .nip-meta b { color:#FFCA28; font-size:8px; font-weight:900; }
+  .allergen-desc { font-size:7.5px; color:#111; line-height:1.3; margin-bottom:2px; font-weight:900; }
+  .nip-heading { font-size:8px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#111; line-height:1.1; margin-top:8px; padding-top:6px; border-top:1px solid rgba(0,0,0,0.2); }
+  .nip-meta { font-size:7px; color:#111; line-height:1.4; font-weight:900; }
+  .nip-meta b { color:#111; font-size:8px; font-weight:900; }
   .nip-table { width:100%; border-collapse:collapse; }
-  .nip-table thead th { font-size:6.5px; font-weight:900; text-transform:uppercase; letter-spacing:0.5px; color:#FFCA28; border-bottom:1px solid #FFCA28; padding:1.5px 2px; text-align:right; }
+  .nip-table thead th { font-size:6.5px; font-weight:900; text-transform:uppercase; letter-spacing:0.5px; color:#111; border-bottom:1px solid #111; padding:1.5px 2px; text-align:right; }
   .nip-table thead th:first-child { text-align:left; }
-  .nip-table tbody td { padding:1.5px 2px; font-size:7px; color:#FFD54F; border-bottom:0.5px solid rgba(255,213,79,0.15); }
+  .nip-table tbody td { padding:1.5px 2px; font-size:7px; color:#111; border-bottom:0.5px solid rgba(0,0,0,0.10); font-weight:900; }
   .nip-table tbody td:not(:first-child) { text-align:right; }
-  .nip-table .sub td:first-child { padding-left:6px; font-size:6.5px; color:#FFD54F; }
+  .nip-table .sub td:first-child { padding-left:6px; font-size:6.5px; color:#333; font-weight:900; }
   .storage-info {
-    border:1px solid rgba(255,213,79,0.5); border-radius:2px;
+    border:1px solid rgba(0,0,0,0.4); border-radius:2px;
     padding:3px 5px; margin-top:auto;
-    font-size:6.5px; color:#FFD54F; line-height:1.5;
+    font-size:6.5px; color:#111; line-height:1.5; font-weight:900;
     letter-spacing:1px; text-transform:uppercase;
     text-align:center;
   }
-  .storage-info span { color:#FFCA28; font-weight:900; font-size:7.5px; }
+  .storage-info span { color:#111; font-weight:900; font-size:7.5px; }
   .cooking-title {
     font-size:7px; font-weight:900; letter-spacing:1.5px; text-transform:uppercase;
-    color:#FFCA28; margin-top:4px; padding-top:4px;
-    border-top:1px solid rgba(255,213,79,0.3);
+    color:#111; margin-top:4px; padding-top:4px;
+    border-top:1px solid rgba(0,0,0,0.2);
   }
   .cooking-text {
-    font-size:6.5px; color:#FFD54F; line-height:1.35; margin-top:1px;
+    font-size:6.5px; color:#111; line-height:1.35; margin-top:1px; font-weight:900;
   }
   .qr-section {
     display:flex; flex-direction:column; align-items:center;
     margin-top:auto; padding-top:4px;
   }
   .qr-title {
-    font-size:6.5px; color:#FFD54F; letter-spacing:0.5px;
+    font-size:6.5px; color:#111; letter-spacing:0.5px; font-weight:900;
     text-align:center; margin-bottom:2px;
   }
   .qr-code {
