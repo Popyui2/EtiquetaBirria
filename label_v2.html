@@ -29,7 +29,8 @@
   .opt-c-bg img {
     width:100%; height:100%;
     object-fit:cover; object-position:50% 45%;
-    opacity:0.9;
+    opacity:1.0;
+    filter: brightness(1.3);
   }
 
   /* Gradient: dark left and right, clear centre */
@@ -38,8 +39,8 @@
     background: linear-gradient(to right,
       rgba(13,13,13,0.0)  0%,
       rgba(13,13,13,0.0)  55%,
-      rgba(13,13,13,0.10) 70%,
-      rgba(13,13,13,0.65) 78%
+      rgba(13,13,13,0.30) 70%,
+      rgba(13,13,13,0.85) 78%
     );
     z-index:1;
   }
@@ -47,7 +48,7 @@
   .body-row { display:flex; flex:1; min-height:0; position:relative; z-index:2; }
 
   .vdiv { width:1px; background:rgba(245,166,35,0.3); margin:0; flex-shrink:0; }
-  .hdiv { height:1px; background:rgba(245,166,35,0.35); margin-bottom:8px; }
+  .hdiv { height:1px; background:rgba(245,166,35,0.35); margin-bottom:3px; }
 
   /* LEFT – now the hero/brand panel */
   .panel-center {
@@ -63,15 +64,16 @@
   .hero-group { margin-top:auto; padding-bottom:30px; text-align:center; }
   .tagline-bottom { font-size:13px; color:#FFB81C; letter-spacing:2px; text-transform:uppercase; font-weight:900; text-shadow:0 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7); margin-bottom:6px; -webkit-text-stroke:1px #000; paint-order:stroke fill; }
   .product-hero { font-size:28px; font-weight:900; color:#FFB81C; text-transform:uppercase; line-height:0.95; font-family:'H74',Arial,sans-serif; text-shadow:0 2px 10px rgba(0,0,0,0.9); white-space:nowrap; -webkit-text-stroke:1px #000; paint-order:stroke fill; }
-  .net-wt-inline { font-size:8px; color:#fff; font-weight:900; letter-spacing:1.5px; background:rgba(0,0,0,0.4); padding:2px 8px; border-radius:8px; text-align:center; display:block; margin-top:3px; }
+  .made-by { font-size:6px; color:#FFB81C; font-weight:900; font-family:'H74',Arial,sans-serif; text-align:center; margin-bottom:2px; line-height:1.2; }
+  .net-wt-inline { font-size:7px; color:#fff; font-weight:900; letter-spacing:0.5px; background:rgba(0,0,0,0.4); padding:2px 6px; border-radius:6px; text-align:center; display:block; white-space:nowrap; }
   .net-wt { font-size:6.5px; color:#FFB81C; font-weight:bold; letter-spacing:1.5px; text-align:left; margin-top:3px; }
 
   /* RIGHT – combined ingredients + nutrition */
   .panel-right {
     width:175px; flex-shrink:0;
-    padding:8px 8px 4px 6px;
+    padding:5px 6px 3px 5px;
     display:flex; flex-direction:column; gap:0px;
-    overflow-y:auto;
+    overflow:hidden;
   }
   .p-title { font-size:8px; letter-spacing:2px; text-transform:uppercase; color:#FFCA28; font-weight:900; margin-bottom:2px; }
   .ingr-list { font-size:7px; color:#FFD54F; line-height:1.3; }
@@ -82,7 +84,7 @@
     letter-spacing:0.3px; text-transform:uppercase; line-height:1.3;
   }
   .allergen-desc { font-size:7.5px; color:#FFD54F; line-height:1.3; margin-bottom:2px; }
-  .nip-heading { font-size:8px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#FFCA28; line-height:1.1; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,213,79,0.3); }
+  .nip-heading { font-size:8px; font-weight:900; letter-spacing:2px; text-transform:uppercase; color:#FFCA28; line-height:1.1; margin-top:4px; padding-top:3px; border-top:1px solid rgba(255,213,79,0.3); }
   .nip-meta { font-size:7px; color:#FFD54F; line-height:1.4; }
   .nip-meta b { color:#FFCA28; font-size:8px; font-weight:900; }
   .nip-table { width:100%; border-collapse:collapse; }
@@ -93,31 +95,39 @@
   .nip-table .sub td:first-child { padding-left:6px; font-size:6.5px; color:#FFD54F; }
   .storage-info {
     border:1px solid rgba(255,213,79,0.5); border-radius:2px;
-    padding:3px 5px; margin-top:auto;
-    font-size:6.5px; color:#FFD54F; line-height:1.5;
+    padding:2px 4px; margin-top:auto;
+    font-size:6.5px; color:#FFD54F; line-height:1.3;
     letter-spacing:1px; text-transform:uppercase;
     text-align:center;
   }
   .storage-info span { color:#FFCA28; font-weight:900; font-size:7.5px; }
   .cooking-title {
     font-size:7px; font-weight:900; letter-spacing:1.5px; text-transform:uppercase;
-    color:#FFCA28; margin-top:4px; padding-top:4px;
+    color:#FFCA28; margin-top:3px; padding-top:3px;
     border-top:1px solid rgba(255,213,79,0.3);
   }
   .cooking-text {
     font-size:6.5px; color:#FFD54F; line-height:1.35; margin-top:1px;
   }
+  .bottom-row {
+    display:flex; flex-direction:row; align-items:center;
+    margin-top:auto; padding-top:2px; gap:6px;
+  }
   .qr-section {
     display:flex; flex-direction:column; align-items:center;
-    margin-top:auto; padding-top:4px;
+    flex-shrink:0;
   }
   .qr-title {
     font-size:6.5px; color:#FFD54F; letter-spacing:0.5px;
-    text-align:center; margin-bottom:2px;
+    text-align:center; margin-top:2px;
   }
   .qr-code {
     width:48px; height:48px;
     border-radius:1px; image-rendering:pixelated;
+  }
+  .bottom-right {
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:center; flex:1;
   }
 
 </style>
@@ -174,10 +184,15 @@
       </table>
       <div class="cooking-title">Cooking Instructions</div>
       <div class="cooking-text">Heat in a pan with a splash of oil, 3–5 min each side until hot. Do not microwave. Do not refreeze once thawed.</div>
-      <div class="net-wt-inline">WT ≈ 1.1 KG</div>
-      <div class="qr-section">
-        <div class="qr-title">Check our other products!</div>
-        <img class="qr-code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAIAAAAkfEPpAAAC+ElEQVR4nO2dQY7UQAwAWbRvQNx53L6JD+zbVty5c+DSI2HJlu2uAapusOlOVLKcpNvjvPx8//ZJ7vKZvoD/EaUDKB3g9fzH17cf4yf4+P7lj/Nn/r96bZmx0THVc1U5z2ukAygdQOkAr9EfMrkvopoTo/zeoXP/iK6tcw0nRjqA0gGUDhDm9JPOM3Jmzk7ejMZu3yeq13NipAMoHUDpAKmcPkUnz0ZjM8/jmXk695UqRjqA0gGUDnA1p2/k3+pYKo+fGOkASgdQOkAqp0/lvk4uPplaE7+5tn5ipAMoHUDpAGFO36j9qD5rn3RyfefZfMODkQ6gdAClAzzk9O21iO39zI33iQ2MdAClAygd4OX8zdFUnXiV7ZrxjRr5znuGkQ6gdAClA7RqGTt7mBvnqs4ZzV8dW53TSAdQOoDSAcp7pBt1hNVjOmy/f1if/qQoHUDpAOVaxk6N4FQdS2bs9m+aOms1RjqA0gGUDtBaT9+oXakytSZTfYfIYE5/IpQOoHSA8np6pnYlGpthqjdLJi9TdY1GOoDSAZQO0FpPv9l7KzrmpForuVH3knFipAMoHUDpAOX69Kk160ze7NTMTNXC+5ujfwSlAygdIFxPz7D9PNupU5zqB5A5b3UeIx1A6QBKB0jl9Jv7h1P7nNExETf3VI10AKUDKB2gtUc61XclM0+VjXXzqXmMdAClAygdoFyf3snjGaZqKG++N2TuASdGOoDSAZQOUF57OZmqVc9A9aLpYE5/IpQOoHSAh5y+zUat+s3vHE29ExjpAEoHUDrAw9oL1XMxYqN/VrV+caPvrpEOoHQApQOE6+nbuXhjPSczT4apbydFxxvpAEoHUDpAq9fuCfVtT+p7Rtan/2UoHUDpAFe/MX2y3ZP9Zq19dX4jHUDpAEoHuJrTt/vGbLwrbPR5N9IBlA6gdIByD68NOjXgmWOq9eOZeTq53kgHUDqA0gFa/V4ybPRY39i/3e4Pc2KkAygdQOkAV+vT5TdGOoDSAZQO8AvpGiKtkZLKQgAAAABJRU5ErkJggg==" alt="QR">
+      <div class="bottom-row">
+        <div class="qr-section">
+          <img class="qr-code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAB8CAIAAAAkfEPpAAAC+ElEQVR4nO2dQY7UQAwAWbRvQNx53L6JD+zbVty5c+DSI2HJlu2uAapusOlOVLKcpNvjvPx8//ZJ7vKZvoD/EaUDKB3g9fzH17cf4yf4+P7lj/Nn/r96bZmx0THVc1U5z2ukAygdQOkAr9EfMrkvopoTo/zeoXP/iK6tcw0nRjqA0gGUDhDm9JPOM3Jmzk7ejMZu3yeq13NipAMoHUDpAKmcPkUnz0ZjM8/jmXk695UqRjqA0gGUDnA1p2/k3+pYKo+fGOkASgdQOkAqp0/lvk4uPplaE7+5tn5ipAMoHUDpAGFO36j9qD5rn3RyfefZfMODkQ6gdAClAzzk9O21iO39zI33iQ2MdAClAygd4OX8zdFUnXiV7ZrxjRr5znuGkQ6gdAClA7RqGTt7mBvnqs4ZzV8dW53TSAdQOoDSAcp7pBt1hNVjOmy/f1if/qQoHUDpAOVaxk6N4FQdS2bs9m+aOms1RjqA0gGUDtBaT9+oXakytSZTfYfIYE5/IpQOoHSA8np6pnYlGpthqjdLJi9TdY1GOoDSAZQO0FpPv9l7KzrmpForuVH3knFipAMoHUDpAOX69Kk160ze7NTMTNXC+5ujfwSlAygdIFxPz7D9PNupU5zqB5A5b3UeIx1A6QBKB0jl9Jv7h1P7nNExETf3VI10AKUDKB2gtUc61XclM0+VjXXzqXmMdAClAygdoFyf3snjGaZqKG++N2TuASdGOoDSAZQOUF57OZmqVc9A9aLpYE5/IpQOoHSAh5y+zUat+s3vHE29ExjpAEoHUDrAw9oL1XMxYqN/VrV+caPvrpEOoHQApQOE6+nbuXhjPSczT4apbydFxxvpAEoHUDpAq9fuCfVtT+p7Rtan/2UoHUDpAFe/MX2y3ZP9Zq19dX4jHUDpAEoHuJrTt/vGbLwrbPR5N9IBlA6gdIByD68NOjXgmWOq9eOZeTq53kgHUDqA0gFa/V4ybPRY39i/3e4Pc2KkAygdQOkAV+vT5TdGOoDSAZQO8AvpGiKtkZLKQgAAAABJRU5ErkJggg==" alt="QR">
+          <div class="qr-title">Check our other products!</div>
+        </div>
+        <div class="bottom-right">
+          <div class="made-by">Made by real Mexicans in New Zealand</div>
+          <div class="net-wt-inline">WT ≈ 1.1 KG</div>
+        </div>
       </div>
       <div class="storage-info">Keep frozen <span>−18°C</span><br>Keep chilled at <span>3°C</span></div>
     </div>
